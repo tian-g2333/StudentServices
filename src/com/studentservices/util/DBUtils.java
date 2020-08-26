@@ -10,8 +10,8 @@ public class DBUtils {
     public static Connection getConnection()
     {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://127.0.0.1:3306/学生生活服务系统?serverTimezone=GMT%2B8&useSSL=false";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://47.112.146.2:3306/学生生活服务系统?serverTimezone=UTC";
             String usename = "student";
             String password = "123456";
             connection = DriverManager.getConnection(url,usename,password);
