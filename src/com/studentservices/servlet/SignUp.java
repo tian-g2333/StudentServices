@@ -23,11 +23,13 @@ public class SignUp extends HttpServlet {
 
         String name = httpServletRequest.getParameter("name");//根据name获取参数
         String password = httpServletRequest.getParameter("password");//根据password获取参数
+        String phone = httpServletRequest.getParameter("phone");//根据phone获取参数
 
         UserDao userDao = new UserDao();
         User user = new User();
         user.setName(name);
         user.setPassword(password);
+        user.setPhone(phone);
 
         if(!userDao.add(user)) //若添加失败
         {
